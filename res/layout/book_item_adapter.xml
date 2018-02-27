@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70.0dip"
+
+    android:drawingCacheQuality="high"
+    android:minHeight="70.0dip"
+    android:orientation="horizontal" >
+    <TextView 
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        
+         android:textSize="30dip"
+        />
+   
+        <TextView
+                 android:id="@+id/tv_dele"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="删除"
+                 android:textSize="30dip"
+                 android:layout_toRightOf="@+id/id"
+                 android:background="#fe9b00"
+                 android:layout_marginLeft="20dip"
+                 />
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ATLS_mca</string>
+    <string name="title_item_detail">Item Detail</string>
+    
+    
+    
+    <string name="status_fg">状态</string>
+    <string name="control_fg">控制</string>
+    <string name="lan_fg">组网</string>
+    <string name="user_fg">用户</string>
+    <string name="timerstart_fg">定时启动</string>
+    <string name="dongtai_fg">动态</string>
+    
+    
+    
+    <!-- 组网页面定义 -->
+	    <!-- 按键定义 -->
+	    <string name="string_request_lan">局域网络查询</string>
+	    <string name="string_init_lan">局域网络初始化</string>
+	    
+	    <!-- 项目标题定义 -->
+	    <string name="lbl_title_mcu_mac">中央控制器</string>
+	    <string name="lbl_title_led_mac">显示提醒子系统</string>
+	    <string name="lbl_title_fan_mac">通风子系统</string>
+	    <string name="lbl_title_monitor_mac">多合一监测模块</string>
+	    <string name="lbl_title_o3_mac">智能臭氧发生器</string>
+	    <string name="lbl_title_switch_mac">开关执行器</string>
+	    
+	    <!-- 项目内容定义 -->
+	    <string name="lbl_msg_mac1">MAC1 ：</string>
+	    <string name="lbl_msg_mac2">MAC2 ：</string>
+	    <string name="lbl_msg_mac3">MAC3 ：</string>
+	    <string name="lbl_msg_mac4">MAC4 ：</string>
+	    <string name="lbl_msg_mac5">MAC5 ：</string>
+	    <string name="lbl_msg_mac6">MAC6 ：</string>
+	    <string name="lbl_msg_mac7">MAC7 ：</string>
+	    <string name="lbl_msg_mac8">MAC8 ：</string>
+	    <string name="lbl_msg_mac9">MAC9 ：</string>
+	    <string name="lbl_msg_mac10">MAC10 ：</string>
+	    
+	    <string name="lbl_msg_mac_default">--------</string>
+
+	    
+	    
+	<!-- 定时页面定义 -->    
+	    <string name="now_time">当前时间：</string>
+	    <string name="time_year">年</string>
+	    <string name="time_month">月</string>
+	    <string name="time_day">日</string>
+	    <string name="time_hour">时</string>
+	    <string name="time_minute">分</string>
+	    
+      	<string name="kjsj">开始时间</string>
+      	<string name="kjrq">日期</string>
+	    
+	    
+</resources>

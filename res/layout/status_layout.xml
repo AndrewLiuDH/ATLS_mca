@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    <TableLayout 
+        android:id="@+id/status_tbl_01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:stretchColumns="*" >
+        
+        <!-- 第0行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/status_textView1_0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+		        android:layout_span="4"
+                android:text="多合一监测模块状态显示"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+            
+        </TableRow>
+	
+        <!-- 第1行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <TextView
+	            android:id="@+id/Status_textView1_0"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="     "
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_textView1_1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="监测模块1"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_textView1_2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="监测模块2"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_textView1_2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="监测模块3"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_textView1_2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="监测模块4"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_textView1_2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="监测模块5"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_textView1_2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="监测模块6"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+        </TableRow>
+        
+        
+        <!-- 第2行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <TextView
+	            android:id="@+id/Status_textView2_0"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="温度值 "
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho1_t"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	          
+	            style="@style/field_value_style"  
+	            android:text="-----摄氏度"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho2_t"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	          
+	            style="@style/field_value_style"  
+	            android:text="-----摄氏度"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho3_t"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	        
+	            style="@style/field_value_style"    
+	            android:text="-----摄氏度"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho4_t"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----摄氏度"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho5_t"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----摄氏度"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho6_t"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	       
+	            style="@style/field_value_style"     
+	            android:text="-----摄氏度"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+        </TableRow>
+        
+        
+        
+        <!-- 第3行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <TextView
+	            android:id="@+id/Status_textView3_0"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="湿度值 "
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho1_h"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	        
+	            style="@style/field_value_style"    
+	            android:text="--%"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho2_h"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="--%"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho3_h"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="--%"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho4_h"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="--%"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho5_h"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	     
+	            style="@style/field_value_style"       
+	            android:text="--%"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho6_h"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	        
+	            style="@style/field_value_style"    
+	            android:text="--%"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+        </TableRow>
+        
+        
+        <!-- 第4行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <TextView
+	            android:id="@+id/Status_textView4_0"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="甲醛浓度值 "
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho1_c"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	     
+	            style="@style/field_value_style"       
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho2_c"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	       
+	            style="@style/field_value_style"     
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho3_c"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho4_c"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	       
+	            style="@style/field_value_style"     
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho5_c"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	     
+	            style="@style/field_value_style"       
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho6_c"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	       
+	            style="@style/field_value_style"     
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+        </TableRow>
+        
+        
+        <!-- 第5行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <TextView
+	            android:id="@+id/Status_textView5_0"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	            
+	            android:text="臭氧浓度值 "
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho1_o"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	       
+	            style="@style/field_value_style"     
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho2_o"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho3_o"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho4_o"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho5_o"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+            <TextView
+	            android:id="@+id/Status_hcho6_o"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"	
+	            android:layout_span="4"	      
+	            style="@style/field_value_style"      
+	            android:text="-----ddb"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" />
+            
+        </TableRow>
+	
+	</TableLayout>
+	
+	
+   <LinearLayout
+        android:id="@+id/status_linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+        
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/inputAT"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/status_linearLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/sendAT"
+        android:ems="10"
+        android:hint="输入AT指令"
+        android:paddingBottom="50dip"/>
+
+    <Button
+        android:id="@+id/sendAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/status_linearLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/inputAT"
+        android:layout_marginRight="20dp"
+        android:text="发送指令" />
+    
+    <TextView
+        android:id="@+id/request_tv1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="30dip"
+	    android:layout_above="@+id/sendAT"
+	    />
+    
+     <Button
+        android:id="@+id/requestlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/request_tv1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="查询记录" />
+     
+     
+      <TextView
+        android:id="@+id/request_tv2"
+	    android:layout_width="fill_parent"
+	    android:layout_height="30dip"
+	    android:layout_above="@+id/requestlog"
+	    />
+    
+     <Button
+        android:id="@+id/clearlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/request_tv2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="清除记录" />
+     
+
+    <ScrollView
+        android:id="@+id/svResult"
+        android:layout_width="1000dip"
+        android:layout_height="200dip"
+        android:layout_above="@+id/inputAT"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/requestlog" >
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="正在连接" />
+    </ScrollView>
+
+</RelativeLayout>

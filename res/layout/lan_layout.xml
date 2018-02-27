@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="4.0dip" >
+    
+    <TableLayout 
+        android:id="@+id/Lan_tbl_01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:stretchColumns="*" >
+        	        
+        	<!-- 按钮 -->
+	        <TableRow
+		        android:id="@+id/Lan_TableRow0"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="2.0dip"  >
+	        
+	        <Button
+		        android:id="@+id/Lan_btn_request_lan"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"   
+		        android:layout_span="1" 
+		        android:padding="2.0dip"    
+		        android:text="@string/string_request_lan" />
+	
+	   		<Button
+		        android:id="@+id/Lan_btn_init_lan"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1" 
+		        android:layout_span="1"
+		        android:padding="2.0dip"
+		        android:text="@string/string_init_lan" />
+
+	   		        
+    		</TableRow>
+    		
+	        <!-- MAC地址映射表 -->
+	        
+	        <!-- 第1行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+	            
+	            <TextView
+		            android:id="@+id/Lan_textView1_0"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"	
+		            android:layout_span="4"	            
+		            android:gravity="center"
+		            android:text="@string/lbl_title_mcu_mac"
+		            android:textSize="20.0sp"
+		            android:textStyle="bold" />
+	            
+	        </TableRow>
+    		
+	        <!-- 第2行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"	            
+	            >
+	            
+	            <TextView
+		            android:id="@+id/Lan_textView2_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac1" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_mcu_mac1_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+
+	        </TableRow>
+
+	        <!-- 显示提醒子系统 -->
+	        <!-- 第3行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow3"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView3_0"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            android:layout_span="4"
+		            android:text="@string/lbl_title_led_mac"
+		            android:textSize="20.0sp"
+		            android:textStyle="bold" />
+	            
+		    </TableRow>
+		    
+	        <!-- 第4行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow4"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+	            <TextView
+		            android:id="@+id/Lan_textView4_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac1" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_led_mac1_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		
+		        
+		    </TableRow>
+		    
+	        <!-- 通风子系统 -->
+	        <!-- 第5行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow5"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView5_0"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            android:layout_span="4"
+		            android:text="@string/lbl_title_fan_mac"
+		            android:textSize="20.0sp"
+		            android:textStyle="bold" />
+	            
+		    </TableRow>
+		    
+	        
+	        <!-- 第6行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow6"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView6_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac1" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_fan_mac1_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView6_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac2" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_fan_mac2_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView6_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac3" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_fan_mac3_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+		    
+	        
+	        <!-- 第7行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow7"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView7_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac4" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_fan_mac4_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView7_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac5" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_fan_mac5_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView7_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac6" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_fan_mac6_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+		    
+	        
+	        
+	        
+	        
+	        <!-- 多合一监测模块 -->
+	        <!-- 第8行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow8"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView8_0"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            android:layout_span="4"
+		            android:text="@string/lbl_title_monitor_mac"
+		            android:textSize="20.0sp"
+		            android:textStyle="bold" />
+	            
+		    </TableRow>
+		    
+	        
+	        <!-- 第9行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow9"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView9_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac1" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_monitor_mac1_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView9_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac2" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_monitor_mac2_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView9_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac3" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_monitor_mac3_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+		    
+	        
+	        <!-- 第10行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow10"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView10_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac4" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_monitor_mac4_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView10_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac5" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_monitor_mac5_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView10_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac6" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_monitor_mac6_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+		    
+	        
+	        <!-- 智能臭氧发生器 -->
+	        <!-- 第11行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow11"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView11_0"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            android:layout_span="4"
+		            android:text="@string/lbl_title_o3_mac"
+		            android:textSize="20.0sp"
+		            android:textStyle="bold" />
+	            
+		    </TableRow>
+		    
+	        <!-- 第12行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow12"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+	            <TextView
+		            android:id="@+id/Lan_textView12_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac1" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_o3_mac1_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		
+		        
+		    </TableRow>
+	        
+	        
+	        <!-- 开关执行器模块 -->
+	        <!-- 第13行 -->
+	        <TableRow 
+	            android:id="@+id/Lan_TableRow13"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView13_0"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            android:layout_span="4"
+		            android:text="@string/lbl_title_switch_mac"
+		            android:textSize="20.0sp"
+		            android:textStyle="bold" />
+	            
+		    </TableRow>
+		    
+	        
+	        <!-- 第14行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow14"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView14_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac1" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac1_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView14_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac2" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac2_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView14_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac3" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac3_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+		    
+	        
+	        <!-- 第15行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow15"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView15_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac4" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac4_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView15_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac5" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac5_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView15_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac6" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac6_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+		    
+	        <!-- 第16行 -->
+	        <TableRow 
+	            android:id="@+id/TableRow16"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            >
+		        
+	            <TextView
+		            android:id="@+id/Lan_textView16_0"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac7" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac7_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView16_1"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac8" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac8_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		        <TextView
+		            android:id="@+id/Lan_textView16_2"
+		            style="@style/lbl_msg_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac9" />
+		
+		        <TextView
+		            android:id="@+id/Lan_txv_switch_mac9_value"
+		            style="@style/field_value_style"
+		            android:layout_gravity="left"
+		            android:text="@string/lbl_msg_mac_default" />
+		        
+		
+		        
+		    </TableRow>
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+		    
+	        
+		    
+    </TableLayout>  
+    
+
+</ScrollView>
