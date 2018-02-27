@@ -162,7 +162,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	
 	
 	
-	public String filename = "hcho1_data";
+//	public String filename = "hcho1_data";
 	
 	private static final int LAN_RCV_000 = 0x00;
 	private static final int STATUS_RCV_031 = 0x01;
@@ -346,13 +346,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				
 				if(hcho1_log){
 					hcho1_log = false;
+					
+/*						
 					FileHelper fHelper = new FileHelper(getApplicationContext());
 		            String filedetail = hour+":"+minute+"    "+status031;
+		            
+	            
 		            try {
 		                fHelper.saveAdd(filename, filedetail);
 		            } catch (Exception e) {
 		                e.printStackTrace();
 		            }
+*/
 				}
 				
                 
@@ -370,13 +375,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				
 				if(hcho2_log){
 					hcho2_log = false;
+					
+/*					
 					FileHelper fHelper = new FileHelper(getApplicationContext());
 		            String filedetail = hour+":"+minute+"    "+status032;
+		            
+
 		            try {
 		                fHelper.saveAdd(filename, filedetail);
 		            } catch (Exception e) {
 		                e.printStackTrace();
 		            }
+*/
 				}
 				
 				break;

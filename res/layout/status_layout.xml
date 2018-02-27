@@ -454,89 +454,42 @@
 	            android:textStyle="bold" />
             
         </TableRow>
+        
+        
+        
+        <!-- 第6行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+		        android:id="@+id/idle_1"
+			    android:layout_width="fill_parent"
+			    android:layout_height="30dip"
+			    />
+            
+            
+        </TableRow>
+        
+        
+        <!-- 第7行 -->
+        <TableRow 
+            android:id="@+id/Status_TableRow7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+           <lecho.lib.hellocharts.view.LineChartView
+		       android:id="@+id/chart"
+		       android:layout_width="match_parent"
+		       android:layout_height="match_parent" />
+            
+            
+        </TableRow>
 	
 	</TableLayout>
 	
 	
-   <LinearLayout
-        android:id="@+id/status_linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:orientation="horizontal" >
-        
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/inputAT"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/status_linearLayout1"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/sendAT"
-        android:ems="10"
-        android:hint="输入AT指令"
-        android:paddingBottom="50dip"/>
-
-    <Button
-        android:id="@+id/sendAT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/status_linearLayout1"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/inputAT"
-        android:layout_marginRight="20dp"
-        android:text="发送指令" />
-    
-    <TextView
-        android:id="@+id/request_tv1"
-	    android:layout_width="fill_parent"
-	    android:layout_height="30dip"
-	    android:layout_above="@+id/sendAT"
-	    />
-    
-     <Button
-        android:id="@+id/requestlog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/request_tv1"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:text="查询记录" />
-     
-     
-      <TextView
-        android:id="@+id/request_tv2"
-	    android:layout_width="fill_parent"
-	    android:layout_height="30dip"
-	    android:layout_above="@+id/requestlog"
-	    />
-    
-     <Button
-        android:id="@+id/clearlog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/request_tv2"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:text="清除记录" />
-     
-
-    <ScrollView
-        android:id="@+id/svResult"
-        android:layout_width="1000dip"
-        android:layout_height="200dip"
-        android:layout_above="@+id/inputAT"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/requestlog" >
-
-        <TextView
-            android:id="@+id/tvLog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="正在连接" />
-    </ScrollView>
+   
 
 </RelativeLayout>
