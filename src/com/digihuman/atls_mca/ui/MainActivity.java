@@ -46,8 +46,11 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android_serialport_api.SerialPort;
 
@@ -1119,7 +1122,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			super.run();
 			
 			while(!isInterrupted()) {
-				
+/*				
 				try {
 					
 					if (mInputStream == null) return;
@@ -1131,6 +1134,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 					e.printStackTrace();
 					return;
 				}
+*/				
 				try {
 					Thread.sleep(50);
 				} catch (Exception e) {
@@ -1144,11 +1148,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 
 	private SerialPort getSerialPort() throws SecurityException, IOException,
 		InvalidParameterException {
+/*
 	if (mSerialPort == null) {
 		
 			mSerialPort = new SerialPort("/dev/ttyS1", 9600, 0);
 		
 	}
+*/
 	return mSerialPort;
 	}
 	
@@ -1174,7 +1180,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		
 		
 		
-		
+/*		
 		try {
 			
 			
@@ -1196,7 +1202,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			Toast.makeText(this, "打开串口失败，IO异常",Toast.LENGTH_SHORT).show();
 		}
 		
-		
+*/		
 		hcho1_log = false;
 		hcho2_log = false;
 		hcho3_log = false;
@@ -1320,7 +1326,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			break;
 		case R.id.user_layout:
 			// 当点击了设置tab时，选中第4个tab
-			setTabSelection(getString(R.string.user_fg));
+			setTabSelection(getString(R.string.timerstart_fg));
 			break;
 		default:
 			break;
@@ -1328,11 +1334,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	}
 
 	private void setCurrentFragment(){
+		
+		Resources resource = (Resources) getBaseContext().getResources();  
+		ColorStateList csl = (ColorStateList) resource.getColorStateList(R.color.text_seclected);
+		
+		
 		clearSelection();
 		mFragmentTransaction = fragmentManager.beginTransaction();
 		
 		lanImage.setImageResource(R.drawable.lan_selected);
-		lanText.setTextColor(Color.WHITE);
+		lanText.setTextColor(csl);
 		
 		if (lanFragment == null) {
 			// 如果MessageFragment为空，则创建一个并添加到界面上
@@ -1353,6 +1364,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	 *          
 	 */
 	public  void setTabSelection(String tag) {
+		
+		
+		Resources resource = (Resources) getBaseContext().getResources();  
+		ColorStateList csl = (ColorStateList) resource.getColorStateList(R.color.text_seclected);
+		
 		// 每次选中之前先清楚掉上次的选中状态
 		clearSelection();
 		// 开启一个Fragment事务
@@ -1361,7 +1377,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		 if(TextUtils.equals(tag, getString(R.string.status_fg))){
 			// 当点击了消息tab时，改变控件的图片和文字颜色
 			 statusImage.setImageResource(R.drawable.status_selected);
-			 statusText.setTextColor(Color.WHITE);
+			 statusText.setTextColor(csl);
 			
 			if (statusFragment == null) {
 				statusFragment = new StatusFragment();
@@ -1369,7 +1385,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			
 		}else if(TextUtils.equals(tag, getString(R.string.control_fg))){
 			controlImage.setImageResource(R.drawable.control_selected);
-			controlText.setTextColor(Color.WHITE);
+			controlText.setTextColor(csl);
 			Log.e(TAG, "contact");
 			if (controlFragment == null) {
 				controlFragment = new ControlFragment();
@@ -1377,20 +1393,20 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			
 		}else if(TextUtils.equals(tag, getString(R.string.lan_fg))){
 			lanImage.setImageResource(R.drawable.lan_selected);
-			lanText.setTextColor(Color.WHITE);
+			lanText.setTextColor(csl);
 			if (lanFragment == null) {
 				lanFragment = new LanFragment();
 			}
 			
 		}else if(TextUtils.equals(tag, getString(R.string.user_fg))){
 			userImage.setImageResource(R.drawable.user_selected);
-			userText.setTextColor(Color.WHITE);
+			userText.setTextColor(csl);
 			if (userFragment == null) {
 				userFragment = new UserFragment();
 			}
 		}else if(TextUtils.equals(tag, getString(R.string.timerstart_fg))){
-			controlImage.setImageResource(R.drawable.control_selected);
-			controlText.setTextColor(Color.WHITE);
+			userImage.setImageResource(R.drawable.user_selected);
+			userText.setTextColor(csl);
 			
 			if (timerstartFragment == null) {
 				timerstartFragment = new TimerstartFragment();
@@ -1522,12 +1538,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	
 	
 	public void SendComCmd(byte[] _cmd) {
+/*
 		try {
 			mOutputStream.write(_cmd);//发送数据
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+*/
 	}
     
     
@@ -1549,14 +1567,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         	//wait for receive data over.
         	
         	byte[] send = message.getBytes();
-        	
+/*        	
         	try {
     			mOutputStream.write(send);//发送数据
     		} catch (IOException e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
-            
+  */          
             
             //开启等待
  //       	TimeoutThread mTimeoutThread = new TimeoutThread();

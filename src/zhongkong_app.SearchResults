@@ -1,11 +1,2 @@
----- bSwitchButtonO3 Matches (10 in 2 files) ----
-ControlFragment.java (com\digihuman\atls_mca\ui):		if(mSwitchButtonO3.getSwitchState() != mMainActivity.bSwitchButtonO3){
-ControlFragment.java (com\digihuman\atls_mca\ui):			mSwitchButtonO3.setSwitchState(mMainActivity.bSwitchButtonO3);
-ControlFragment.java (com\digihuman\atls_mca\ui):		        	mMainActivity.bSwitchButtonO3 = true;
-ControlFragment.java (com\digihuman\atls_mca\ui):		        	mMainActivity.bSwitchButtonO3 = false;
-MainActivity.java (com\digihuman\atls_mca\ui):	public boolean	bSwitchButtonO3;
-MainActivity.java (com\digihuman\atls_mca\ui):	        				if(bSwitchButtonO3 == false){
-MainActivity.java (com\digihuman\atls_mca\ui):		    		        	bSwitchButtonO3 = true;
-MainActivity.java (com\digihuman\atls_mca\ui):	        				if(bSwitchButtonO3 == true){
-MainActivity.java (com\digihuman\atls_mca\ui):		    		        	bSwitchButtonO3 = false;
-MainActivity.java (com\digihuman\atls_mca\ui):		bSwitchButtonO3 = sp.getBoolean("mSwitchButtonO3", false);
+---- CommMain Matches (1 in 1 files) ----
+CommMain.java (android_serialport_api):public class CommMain {

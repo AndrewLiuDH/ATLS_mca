@@ -34,7 +34,7 @@ public class ControlFragment extends BaseFragment {
 
 	private SeekBar mSeekBar;//ÍÏ¶¯Ìõ
 	
-	private Button btn_timerstart;
+//	private Button btn_timerstart;
 	
 
 	private static final int CONTROL_FLASH = 0x20;
@@ -361,7 +361,7 @@ public class ControlFragment extends BaseFragment {
         
         
 		mMainActivity = (MainActivity) getActivity();
-		
+ /*		
 		btn_timerstart = (Button) controlLayout.findViewById(R.id.control_btn_timerstart);
 		btn_timerstart.setOnClickListener(new OnClickListener() {
 			@Override
@@ -370,7 +370,7 @@ public class ControlFragment extends BaseFragment {
 				mMainActivity.setTabSelection(getString(R.string.timerstart_fg));
 			}
 		});
-		
+*/		
 		
 		return controlLayout;
 	}

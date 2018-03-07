@@ -2,15 +2,28 @@
 <resources>
     <color name="bg_black">#000000</color>
     <color name="bg_white">#FFFFFF</color>
-    <color name="bg_topbar">#FCFCFC</color>
-    <color name="bg_gray">#00F1F1F1</color>
+    <color name="bg_gray">#9A9A9A</color>
+    
+    
+    
+    <color name="text_unseclect">#82858b</color>
+    <color name="text_seclected">#12A8AC</color>
+    <color name="text_gray">#6d6d6d</color>
+    <color name="text_black">#403f40</color>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <color name="transparent">#00FFFFFF</color>
-
-
-
-
-
-    <color name="text_gray">#8D7A71</color>
+    <color name="bg_topbar">#FCFCFC</color>
+    
     <color name="text_white">#FFFFFF</color>
     <color name="text_yellow">#FFC800</color>
     <color name="text_topbar">#694E42</color>

@@ -19,6 +19,7 @@ import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,9 +81,6 @@ public class StatusFragment extends BaseFragment {
 	
 	private static final int STATUS_FLASH = 0x20;
 	private Timer mTimerFlash = new Timer();
-	
-	
-	
 	
 	
 	
@@ -212,6 +210,7 @@ public class StatusFragment extends BaseFragment {
 		
 		
 		
+		
 		btsend.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -223,6 +222,8 @@ public class StatusFragment extends BaseFragment {
 				
 				mMainActivity.sendComMessage(at_string);
 				addLog(at_string);
+				
+				//addLog(String.format("·Ö±æÂÊ£º%d,%d\r\n",getResources().getDisplayMetrics().widthPixels,getResources().getDisplayMetrics().heightPixels));
 				
 			
 //			mMainActivity.postSensorconfig();

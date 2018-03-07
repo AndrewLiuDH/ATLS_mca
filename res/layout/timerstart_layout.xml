@@ -226,9 +226,8 @@
 	<ListView 
 	    android:id="@+id/listview"
 	    android:layout_width="fill_parent"
-	    android:stackFromBottom="true"
 		android:transcriptMode="alwaysScroll"
-	    android:layout_height="150dip"
+	    android:layout_height="360dip"
 	    ></ListView>
 
      
