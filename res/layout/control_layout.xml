@@ -2,9 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/bg_white"
-    android:paddingRight="40dip"
-    android:paddingLeft="40dip" >
+    android:background="@color/bg_white" >
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
@@ -12,7 +10,9 @@
     <TextView
 	    android:id="@+id/control_textView1_0"
 	    android:layout_width="wrap_content"
-	    android:layout_height="60px"      
+	    android:layout_height="54px" 
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"     
 	    android:gravity="center_vertical|left"
 	    android:text="@string/lbl_title_led_mac"
 	    android:textSize="20.0sp"
@@ -24,6 +24,8 @@
         android:id="@+id/control_view_line1"
         android:layout_width="match_parent"
         android:layout_height="2px"
+    	android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
         android:layout_below="@id/control_textView1_0"
         android:background="@color/bg_gray"/>
     
@@ -31,7 +33,9 @@
         android:id="@+id/control_linearlayout2_0"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        
+        android:gravity="center_vertical|left" 
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"
         android:orientation="horizontal"
         
         android:layout_below="@id/control_view_line1" 
@@ -39,9 +43,10 @@
         
         <TextView
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
+	        android:layout_height="54px"
+	        android:gravity="center_vertical|left" 
 	        android:textSize="20.0sp"
-	        android:padding="16dp"
+    		android:paddingLeft="16dp"
 	        android:text="显示屏幕开关：" 
 	        android:textColor="@color/text_gray"
         	/>
@@ -49,7 +54,7 @@
         <com.digihuman.atls_mca.ui.SwitchButton
             android:id="@+id/led_onoff_switcher"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
+            android:layout_height="54px" 
             android:layout_gravity="center_vertical"
             />
         
@@ -72,13 +77,15 @@
             android:id="@+id/led_seekBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="280dip"
-            android:layout_height="30dip"
-            android:layout_gravity="center_vertical"
+            android:layout_height="54px"
+            android:gravity="center_vertical"
             android:max="159"
             android:maxHeight="4dip"
             android:minHeight="4dip"
             android:progress="159"
-            android:thumbOffset="0dp" />
+            android:thumbOffset="0dp" 
+            android:progressDrawable="@drawable/po_seekbar"  
+        	android:thumb="@drawable/seekbar_thumb"/>
     
     </LinearLayout>
     
@@ -95,7 +102,9 @@
     <RelativeLayout
             android:id="@+id/control_relativeLayout1_0"
             android:layout_width="match_parent"
-            android:layout_height="140px"
+            android:layout_height="130px" 
+    		android:paddingRight="40dip"
+    		android:paddingLeft="40dip"
             android:layout_below="@id/control_view_line2" >
 
         	<View
@@ -108,7 +117,7 @@
         	
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140px"
+                android:layout_height="130px"
              	android:layout_toLeftOf="@id/control_view_line3"
              	android:paddingRight="40px"
                 android:orientation="vertical" >
@@ -118,7 +127,7 @@
                 <TextView
 				    android:id="@+id/control_textView3_0"
 				    android:layout_width="wrap_content"
-				    android:layout_height="58px"      
+				    android:layout_height="53px"      
 				    android:gravity="center"
 				    android:text="@string/lbl_title_fan_mac"
 				    android:textSize="20.0sp"
@@ -137,7 +146,7 @@
 			    <LinearLayout
 			        android:id="@+id/control_linearlayout4_0"
 			        android:layout_width="fill_parent"
-			        android:layout_height="80px"
+			        android:layout_height="75px"
 			        android:layout_alignParentLeft="true"
 			        android:orientation="horizontal"
 			        >
@@ -148,7 +157,7 @@
 				        android:textSize="20.0sp"
 				        android:padding="16dp"
 				        android:text="通风模块开关："
-		        		android:textColor="@color/bg_gray" 
+		        		android:textColor="@color/text_gray" 
 			        	/>
 			        
 			        <com.digihuman.atls_mca.ui.SwitchButton
@@ -169,7 +178,7 @@
             
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140px"
+                android:layout_height="130px"
              	android:layout_toRightOf="@id/control_view_line3"
              	android:paddingLeft="40px"
                 android:orientation="vertical" >
@@ -177,7 +186,7 @@
                 <TextView
 				    android:id="@+id/control_textView5_0"
 				    android:layout_width="wrap_content"
-				    android:layout_height="58px"      
+				    android:layout_height="53px"      
 				    android:gravity="center"
 				    android:text="@string/lbl_title_o3_mac"
 				    android:textSize="20.0sp"
@@ -195,7 +204,7 @@
 			    <LinearLayout
 			        android:id="@+id/control_linearlayout6_0"
 			        android:layout_width="fill_parent"
-			        android:layout_height="80px"
+			        android:layout_height="75px"
 			        android:layout_alignParentLeft="true"
 			        android:orientation="horizontal" 
 			        >
@@ -206,7 +215,7 @@
 				        android:textSize="20.0sp"
 				        android:padding="16dp"
 				        android:text="臭氧发生器开关："
-		        		android:textColor="@color/bg_gray" 
+		        		android:textColor="@color/text_gray" 
 			        	/>
 			        
 			        <com.digihuman.atls_mca.ui.SwitchButton
@@ -241,13 +250,19 @@
         android:id="@+id/control_view_line1"
         android:layout_width="match_parent"
         android:layout_height="2px"
+         
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"
         android:layout_below="@id/control_textView1_0"
         android:background="@color/bg_gray"/>
 
     <TextView
 	    android:id="@+id/control_textView7_0"
 	    android:layout_width="wrap_content"
-	    android:layout_height="56px"      
+	    android:layout_height="53px"  
+	     
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"    
 	    android:gravity="center_vertical|left"
 	    android:text="@string/lbl_title_switch_mac"
 	    android:textSize="20.0sp"
@@ -260,6 +275,8 @@
         android:id="@+id/control_view_line7"
         android:layout_width="match_parent"
         android:layout_height="2px"
+    	android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
         android:layout_below="@id/control_textView7_0"
         android:background="@color/bg_gray"/>
 
@@ -274,206 +291,347 @@
     <LinearLayout
         android:id="@+id/control_linearlayout8_0"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" 
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"
         android:layout_alignParentLeft="true"
         android:orientation="horizontal"
         android:layout_below="@id/control_view_line7" 
         >
         
-        <TextView
+        
+        <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器1：" 
-	        android:textColor="@color/bg_gray"
-        	/>
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+            
+	        <TextView
+	            android:id="@+id/control_textview_actor_1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器1" 
+		        android:clickable="true"
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch1_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:layout_gravity="center_vertical"
+	            />
         
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch1_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:layout_gravity="center_vertical"
-            />
+        </LinearLayout>
         
         
-        <View
-	        android:layout_width="50dip"
-	        android:layout_height="fill_parent"
-	        />
-        
-        <TextView
+        <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器2：" 
-	        android:textColor="@color/bg_gray"
-        	/>
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+	        
+	        <TextView
+	            android:id="@+id/control_textview_actor_2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器2" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch2_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	        
+        </LinearLayout>
         
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch2_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
-        
-        <View
-	        android:layout_width="50dip"
-	        android:layout_height="fill_parent"
-	        />
-        
-        <TextView
+       
+
+        <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器3：" 
-	        android:textColor="@color/bg_gray"
-        	/>
-        
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch3_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+	        
+	        <TextView
+	            android:id="@+id/control_textview_actor_3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器3" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch3_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout>
     </LinearLayout>
     
     <LinearLayout
         android:id="@+id/control_linearlayout9_0"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" 
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"
         android:layout_alignParentLeft="true"
         android:orientation="horizontal"
         android:layout_below="@id/control_linearlayout8_0" 
         >
         
-        <TextView
+        <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器4：" 
-	        android:textColor="@color/bg_gray"
-        	/>
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
         
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch4_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
-        
-        <View
-	        android:layout_width="50dip"
-	        android:layout_height="fill_parent"
-	        />
-        <TextView
+	        <TextView
+	            android:id="@+id/control_textview_actor_4"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器4" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch4_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout> 
+	       
+	    <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器5：" 
-	        android:textColor="@color/bg_gray"
-        	/>
-        
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch5_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
-        
-        <View
-	        android:layout_width="50dip"
-	        android:layout_height="fill_parent"
-	        />
-        
-        <TextView
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >   
+	        <TextView
+	            android:id="@+id/control_textview_actor_5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器5" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch5_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout>     
+	       
+	    <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器6：" 
-	        android:textColor="@color/bg_gray"
-        	/>
-        
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch6_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >    
+	        <TextView
+	            android:id="@+id/control_textview_actor_6"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器6" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch6_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout>    
     </LinearLayout>
     
     
     <LinearLayout
         android:id="@+id/control_linearlayout10_0"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" 
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"
         android:layout_alignParentLeft="true"
         android:orientation="horizontal"
         android:layout_below="@id/control_linearlayout9_0" 
         >
-        
-        <TextView
+	    
+        <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器7：" 
-	        android:textColor="@color/bg_gray"
-        	/>
-        
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch7_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
-        
-        <View
-	        android:layout_width="50dip"
-	        android:layout_height="fill_parent"
-	        />
-        
-        <TextView
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+	        <TextView
+	            android:id="@+id/control_textview_actor_7"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器7" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch7_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout>    
+	    <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器8：" 
-	        android:textColor="@color/bg_gray"
-        	/>
-        
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch8_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
-        
-        <View
-	        android:layout_width="50dip"
-	        android:layout_height="fill_parent"
-	        />
-        
-        <TextView
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >    
+	        
+	        <TextView
+	            android:id="@+id/control_textview_actor_8"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器8" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch8_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout> 
+	    <LinearLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:textSize="20.0sp"
-	        android:padding="16dp"
-	        android:text="执行器9：" 
-	        android:textColor="@color/bg_gray"
-        	/>
-        
-        <com.digihuman.atls_mca.ui.SwitchButton
-            android:id="@+id/switch9_onoff_switcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  
-            android:layout_gravity="center_vertical"
-            />
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >   
+	        
+	        <TextView
+	            android:id="@+id/control_textview_actor_9"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:padding="16dp"
+		        android:text="执行器9" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="20.0sp"
+		        android:text="：" 
+		        android:textColor="@color/text_gray"
+	        	/>
+	        
+	        <com.digihuman.atls_mca.ui.SwitchButton
+	            android:id="@+id/switch9_onoff_switcher"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:layout_gravity="center_vertical"
+	            />
+	    </LinearLayout>
     </LinearLayout>
     
    

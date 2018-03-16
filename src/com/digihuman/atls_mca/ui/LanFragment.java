@@ -9,6 +9,9 @@ import com.digihuman.atls_mca.R;
 
 import android.support.v4.app.Fragment;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -240,6 +243,40 @@ public class LanFragment extends BaseFragment {
 				mMainActivity.sendComMessage(at_string);
 				
 				
+				final ProgressDialog dialog = new ProgressDialog(mMainActivity); 
+				//设置进度条风格，风格为圆形，旋转的 
+				dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); 
+				//设置ProgressDialog 标题 
+				dialog.setTitle("查询ZigBee局域网络"); 
+				//设置ProgressDialog 提示信息 
+				dialog.setMessage("查询进行中……"); 
+				//设置ProgressDialog 标题图标 
+				dialog.setIcon(android.R.drawable.ic_dialog_map); 
+				
+				//设置ProgressDialog 的进度条是否不明确 
+				dialog.setIndeterminate(false); 
+				//设置ProgressDialog 是否可以按退回按键取消 
+				dialog.setCancelable(true); 
+				//显示 
+				dialog.show();
+				
+				Thread thread = new Thread() {
+					public void run() {
+					try {
+						sleep(1500);
+					} catch (InterruptedException e) {
+						// TODO 自动生成的 catch 块
+						e.printStackTrace();
+						}
+						dialog.dismiss();// 万万不可少这句，否则会程序会卡死。
+					}
+					};
+					thread.start();
+
+				
+				
+				
+				
 			}
 		});
 		
@@ -250,9 +287,43 @@ public class LanFragment extends BaseFragment {
 				// TODO Auto-generated method stub
 				
 				
-				String at_string = "AT+000=1\r\n";
-				mMainActivity.sendComMessage(at_string);
-				clearTextContents();
+				new AlertDialog.Builder(mMainActivity).setTitle("您确定要初始化Zigbee局域网络?")  
+                .setIcon(android.R.drawable.ic_dialog_info)
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                    @Override  
+                    public void onClick(DialogInterface arg0, int arg1) {  
+                    	
+                    	
+                    	String at_string = "AT+000=1\r\n";
+        				mMainActivity.sendComMessage(at_string);
+        				clearTextContents();
+        				
+        				mMainActivity.editor.putString("control_textview_actor_1", "执行器1");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_2", "执行器2");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_3", "执行器3");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_4", "执行器4");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_5", "执行器5");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_6", "执行器6");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_7", "执行器7");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_8", "执行器8");  
+                    	mMainActivity.editor.commit();
+                    	mMainActivity.editor.putString("control_textview_actor_9", "执行器9");  
+                    	mMainActivity.editor.commit();
+                    }  
+                }).setNegativeButton("取消", null).show();
+				
+				
+				
+				
+				
+            	
 	
 			}
 		});

@@ -11,7 +11,7 @@
         <ImageView
         android:id="@+id/top_title"
         android:layout_width="match_parent"  
-        android:layout_height="74px"
+        android:layout_height="64px"
         android:src="@drawable/title"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
@@ -19,7 +19,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="24px"
+            android:layout_height="15px"
             android:layout_below="@id/top_title"
             android:background="@color/bg_gray"/>
 
@@ -34,7 +34,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="24px"
+        android:layout_height="15px"
         android:layout_below="@id/content"
         android:background="@color/bg_gray"/>
     

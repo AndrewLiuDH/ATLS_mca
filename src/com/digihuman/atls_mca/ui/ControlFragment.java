@@ -7,6 +7,8 @@ import com.digihuman.atls_mca.R;
 
 
 import android.support.v4.app.Fragment;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,10 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
 
-public class ControlFragment extends BaseFragment {
+public class ControlFragment extends BaseFragment implements OnClickListener{
 	
 	
 	private static int progress_saved;
@@ -35,6 +39,17 @@ public class ControlFragment extends BaseFragment {
 	private SeekBar mSeekBar;//拖动条
 	
 //	private Button btn_timerstart;
+	
+	private TextView textviewActor1;
+	private TextView textviewActor2;
+	private TextView textviewActor3;
+	private TextView textviewActor4;
+	private TextView textviewActor5;
+	private TextView textviewActor6;
+	private TextView textviewActor7;
+	private TextView textviewActor8;
+	private TextView textviewActor9;
+
 	
 
 	private static final int CONTROL_FLASH = 0x20;
@@ -372,6 +387,52 @@ public class ControlFragment extends BaseFragment {
 		});
 */		
 		
+		
+		
+		textviewActor1 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_1);
+		textviewActor1.setOnClickListener(this);
+		textviewActor1.setText(mMainActivity.sp.getString("control_textview_actor_1", "执行器1"));
+		
+		textviewActor2 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_2);
+		textviewActor2.setOnClickListener(this);
+		textviewActor2.setText(mMainActivity.sp.getString("control_textview_actor_2", "执行器2"));
+		
+		textviewActor3 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_3);
+		textviewActor3.setOnClickListener(this);
+		textviewActor3.setText(mMainActivity.sp.getString("control_textview_actor_3", "执行器3"));
+		
+		textviewActor4 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_4);
+		textviewActor4.setOnClickListener(this);
+		textviewActor4.setText(mMainActivity.sp.getString("control_textview_actor_4", "执行器4"));
+		
+		textviewActor5 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_5);
+		textviewActor5.setOnClickListener(this);
+		textviewActor5.setText(mMainActivity.sp.getString("control_textview_actor_5", "执行器5"));
+		
+		textviewActor6 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_6);
+		textviewActor6.setOnClickListener(this);
+		textviewActor6.setText(mMainActivity.sp.getString("control_textview_actor_6", "执行器6"));
+		
+		
+		textviewActor7 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_7);
+		textviewActor7.setOnClickListener(this);
+		textviewActor7.setText(mMainActivity.sp.getString("control_textview_actor_7", "执行器7"));
+		
+		textviewActor8 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_8);
+		textviewActor8.setOnClickListener(this);
+		textviewActor8.setText(mMainActivity.sp.getString("control_textview_actor_8", "执行器8"));
+		
+		textviewActor9 = (TextView)controlLayout.findViewById(R.id.control_textview_actor_9);
+		textviewActor9.setOnClickListener(this);
+		textviewActor9.setText(mMainActivity.sp.getString("control_textview_actor_9", "执行器9"));
+		
+		
+		
+//		String temp = mMainActivity.sp.getString("control_textview_actor_1", "执行器1：");
+//		str_actor1_name = mMainActivity.sp.getString("control_textview_actor_1", "执行器1：");
+		
+		
+		
 		return controlLayout;
 	}
 
@@ -405,6 +466,199 @@ public class ControlFragment extends BaseFragment {
 		mMainActivity.controlFragmentOn = false;
 		mTimerFlash.cancel();
 		super.onPause();
+	}
+	@Override
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		final EditText et = new EditText(mMainActivity);
+		
+		switch(arg0.getId()){  
+        case R.id.control_textview_actor_1:  
+            
+        	
+            et.setText(mMainActivity.sp.getString("control_textview_actor_1", "执行器1"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                            //Toast.makeText(TestTabActivity.this, et.getText().toString(),  
+                            //      Toast.LENGTH_LONG).show();  
+                        	mMainActivity.editor.putString("control_textview_actor_1", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+//                        	str_actor1_name = et.getText().toString();
+                    		
+                    		textviewActor1.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break; 
+            
+            
+        case R.id.control_textview_actor_2:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_2", "执行器2"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_2", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor2.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break;  
+            
+            
+        case R.id.control_textview_actor_3:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_3", "执行器3"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_3", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor3.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break; 
+            
+            
+        case R.id.control_textview_actor_4:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_4", "执行器4"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_4", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor4.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break;  
+            
+            
+        case R.id.control_textview_actor_5:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_5", "执行器5"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_5", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor5.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break;  
+            
+            
+            
+        case R.id.control_textview_actor_6:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_6", "执行器6"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_6", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor6.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break;  
+            
+            
+        case R.id.control_textview_actor_7:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_7", "执行器7"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_7", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor7.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break;  
+            
+            
+        case R.id.control_textview_actor_8:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_8", "执行器8"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_8", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor8.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break; 
+            
+            
+        case R.id.control_textview_actor_9:  
+            et.setText(mMainActivity.sp.getString("control_textview_actor_9", "执行器9"));  
+                    //获取ip而已，不用在乎  
+            new AlertDialog.Builder(mMainActivity).setTitle("请输入新的名称")  
+                    .setIcon(android.R.drawable.ic_dialog_info).setView(et)  
+                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {  
+                        @Override  
+                        public void onClick(DialogInterface arg0, int arg1) {  
+                            //数据获取  
+                        	mMainActivity.editor.putString("control_textview_actor_9", et.getText().toString());  
+                            //关键在这儿，获取输入框的数据，原来很简单！！  
+                        	mMainActivity.editor.commit(); 
+                    		
+                    		textviewActor9.setText(et.getText().toString());
+                        }  
+                    }).setNegativeButton("取消", null).show();
+            
+            break; 
+        
+        }  
 	}
 	
 }

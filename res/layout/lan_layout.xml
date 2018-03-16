@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="4.0dip" >
+    android:background="@color/bg_white"
+    >
     
     <TableLayout 
         android:id="@+id/Lan_tbl_01"
@@ -11,568 +12,1208 @@
         android:fitsSystemWindows="true"
         android:stretchColumns="*" >
         	        
-        	<!-- 按钮 -->
-	        <TableRow
-		        android:id="@+id/Lan_TableRow0"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:padding="2.0dip"  >
+       	<!-- 按钮 -->
+        <TableRow
+	        android:id="@+id/Lan_TableRow0"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="4dip"
+    		>
 	        
+            
+            <TextView
+	            android:id="@+id/Lan_textView1_0"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"  
+	            android:layout_marginLeft="36dip"      
+	            android:layout_gravity="center_vertical"
+	            android:layout_span="1"
+	            android:text="中控系统ID:"
+	            style="@style/lbl_msg_style" />
+            
+            <TextView
+	            android:id="@+id/Lan_txv_mcu_mac1_value"
+	            style="@style/field_value_style"
+	            android:layout_gravity="center_vertical"
+	            android:layout_span="1"
+	            android:text="@string/lbl_msg_mac_default" />
+	        <View
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_span="4"
+	        />
 	        <Button
 		        android:id="@+id/Lan_btn_request_lan"
-		        style="?android:attr/buttonStyleSmall"
+		        android:background="@drawable/bt_shape" 
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_weight="1"   
+		        android:layout_marginRight="20dip"
+    			android:layout_marginLeft="20dip"
 		        android:layout_span="1" 
-		        android:padding="2.0dip"    
 		        android:text="@string/string_request_lan" />
 	
 	   		<Button
 		        android:id="@+id/Lan_btn_init_lan"
-		        style="?android:attr/buttonStyleSmall"
+		        android:background="@drawable/bt_shape"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_weight="1" 
+		        android:layout_marginRight="20dip"
+    			android:layout_marginLeft="20dip"
 		        android:layout_span="1"
-		        android:padding="2.0dip"
 		        android:text="@string/string_init_lan" />
 
-	   		        
-    		</TableRow>
-    		
-	        <!-- MAC地址映射表 -->
-	        
-	        <!-- 第1行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow1"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-	            
-	            <TextView
-		            android:id="@+id/Lan_textView1_0"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:layout_weight="1"	
-		            android:layout_span="4"	            
-		            android:gravity="center"
-		            android:text="@string/lbl_title_mcu_mac"
-		            android:textSize="20.0sp"
-		            android:textStyle="bold" />
-	            
-	        </TableRow>
-    		
-	        <!-- 第2行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow2"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"	            
-	            >
-	            
-	            <TextView
-		            android:id="@+id/Lan_textView2_0"
-		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
-		            android:text="@string/lbl_msg_mac1" />
-		
-		        <TextView
-		            android:id="@+id/Lan_txv_mcu_mac1_value"
-		            style="@style/field_value_style"
-		            android:layout_gravity="left"
-		            android:text="@string/lbl_msg_mac_default" />
+   		        
+   		</TableRow>
+   		
+        
+        <View
+        android:id="@+id/lan_view_line1"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/bg_gray"/>
+        
+        
+        
+        
+        
+        
+        
+        
+        <RelativeLayout
+            android:id="@+id/lan_relativeLayout1_0"
+            android:layout_width="match_parent"
+            android:layout_height="120px" 
+    		android:paddingRight="40dip"
+    		android:paddingLeft="40dip"
+            >
 
-	        </TableRow>
+        	<View
+		        android:id="@+id/lan_view_line2"
+		        android:layout_width="10px"
+		        android:layout_height="match_parent"
+		        android:layout_centerInParent="true"
+		        android:background="@color/bg_gray"/>
+        	
+        	
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+             	android:layout_toLeftOf="@id/lan_view_line2"
+             	android:paddingRight="40dip"
+                android:orientation="vertical" >
 
-	        <!-- 显示提醒子系统 -->
-	        <!-- 第3行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow3"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
-	            <TextView
-		            android:id="@+id/Lan_textView3_0"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:gravity="center"
-		            android:layout_weight="1"
-		            android:layout_span="4"
-		            android:text="@string/lbl_title_led_mac"
-		            android:textSize="20.0sp"
-		            android:textStyle="bold" />
-	            
-		    </TableRow>
-		    
-	        <!-- 第4行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow4"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-	            <TextView
-		            android:id="@+id/Lan_textView4_0"
-		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
-		            android:text="@string/lbl_msg_mac1" />
-		
-		        <TextView
-		            android:id="@+id/Lan_txv_led_mac1_value"
-		            style="@style/field_value_style"
-		            android:layout_gravity="left"
-		            android:text="@string/lbl_msg_mac_default" />
-		
-		        
-		    </TableRow>
-		    
-	        <!-- 通风子系统 -->
-	        <!-- 第5行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow5"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
-	            <TextView
-		            android:id="@+id/Lan_textView5_0"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:gravity="center"
-		            android:layout_weight="1"
-		            android:layout_span="4"
-		            android:text="@string/lbl_title_fan_mac"
-		            android:textSize="20.0sp"
-		            android:textStyle="bold" />
-	            
-		    </TableRow>
-		    
+                
+                
+                <TextView
+				    android:id="@+id/lan_textView1_0"
+				    android:layout_width="wrap_content"
+				    android:layout_height="58px"      
+				    android:gravity="center"
+				    android:text="@string/lbl_title_led_mac"
+				    android:textSize="20.0sp"
+				    android:textStyle="bold" 
+				    android:textColor="@color/text_black"
+				    />
+                
+                
+                <View
+			        android:id="@+id/lan_view_line3"
+			        android:layout_width="match_parent"
+			        android:layout_height="2px" 
+			        android:layout_marginRight="40px"
+			        android:background="@color/bg_gray"/>
+                
+			
+			    <LinearLayout
+			        android:id="@+id/lan_linearlayout4_0"
+			        android:layout_width="fill_parent"
+			        android:layout_height="60px"
+			        android:layout_alignParentLeft="true"
+			        android:orientation="horizontal"
+			        >
+			        
+			        <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/lbl_msg_style"
+				        android:layout_gravity="center_vertical"
+				        android:text="@string/lbl_msg_mac1"
+		        		android:textColor="@color/text_gray" 
+			        	/>
+			        
+			        <TextView
+			            android:id="@+id/Lan_txv_led_mac1_value"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            style="@style/field_value_style"
+			            android:layout_gravity="center_vertical"
+			            android:text="@string/lbl_msg_mac_default" />
+
+			    </LinearLayout>
+            </LinearLayout>
+            
+            
+            
+            
+            
+            
+            
+           
+        
+        
+        
+        
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+             	android:layout_toRightOf="@id/lan_view_line2"
+             	android:paddingLeft="40dip"
+                android:orientation="vertical" >
+
+                <TextView
+				    android:id="@+id/lan_textView5_0"
+				    android:layout_width="wrap_content"
+				    android:layout_height="58px"      
+				    android:gravity="center"
+				    android:text="@string/lbl_title_o3_mac"
+				    android:textSize="20.0sp"
+				    android:textStyle="bold" 
+				    android:textColor="@color/text_black"
+				    />
+                
+                
+                <View
+			        android:id="@+id/lan_view_line4"
+			        android:layout_width="match_parent"
+			        android:layout_height="2px"
+			        android:background="@color/bg_gray"/>
+
+			    <LinearLayout
+			        android:id="@+id/lan_linearlayout6_0"
+			        android:layout_width="fill_parent"
+			        android:layout_height="60px"
+			        android:layout_alignParentLeft="true"
+			        android:orientation="horizontal" 
+			        >
+			        
+			        <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        style="@style/lbl_msg_style"
+				        android:layout_gravity="center_vertical"
+				        android:text="@string/lbl_msg_mac1"
+		        		android:textColor="@color/text_gray" 
+			        	/>
+			        
+			        <TextView
+			            android:id="@+id/Lan_txv_o3_mac1_value"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            style="@style/field_value_style"
+			            android:layout_gravity="center_vertical"
+			            android:text="@string/lbl_msg_mac_default" />
+			        
+			        
+			    
+			    </LinearLayout>
+            </LinearLayout>
+            
+            
+            
+        </RelativeLayout>
+        
+        
+        <View
+        android:id="@+id/lan_view_line5"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/bg_gray"/>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+
+        
+	    
+        <!-- 通风子系统 -->
+        <!-- 第5行 -->
+        <TableRow 
+            android:id="@+id/Lan_TableRow5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+	        android:layout_marginRight="40dip"
+            >
 	        
-	        <!-- 第6行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow6"
+            <TextView
+	            android:id="@+id/Lan_textView5_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+	            android:layout_height="60px"
+	            android:gravity="center_vertical|left"
+	            android:layout_weight="1"
+	            android:layout_span="4"
+	            android:text="@string/lbl_title_fan_mac"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold" 
+	            android:textColor="@color/text_black" />
+            
+	    </TableRow>
+	    
+        
+        <View
+	        android:id="@+id/lan_view_line6"
+	        android:layout_width="match_parent"
+	        android:layout_height="2px"
+	        android:layout_marginLeft="40px"
+	        android:layout_marginRight="40px"
+	        android:background="@color/bg_gray"/>
+	    
+   
+        
+        
+        
+        <LinearLayout
+	        android:id="@+id/lan_linearlayout1_0"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
+	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+            
 	            <TextView
 		            android:id="@+id/Lan_textView6_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac1" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_fan_mac1_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView6_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac2" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_fan_mac2_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView6_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac3" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_fan_mac3_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
-		    
 	        
-	        <!-- 第7行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow7"
+	        
+	    	</LinearLayout>
+	    </LinearLayout>
+    
+        
+        
+        <!-- 第6行
+        <TableRow 
+            android:id="@+id/TableRow6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+	        android:layout_marginRight="40dip"
+            >
+	        
+            <TextView
+	            android:id="@+id/Lan_textView6_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+            	android:layout_height="40px"
+            	android:layout_span="1"
+            	android:layout_column="0"
+	            style="@style/lbl_msg_style"
+	            android:gravity="center_vertical|left"
+	            android:text="@string/lbl_msg_mac1" />
+	
+	        <TextView
+	            android:id="@+id/Lan_txv_fan_mac1_value"
+	            android:layout_width="fill_parent"
+            	android:layout_height="40px"
+            	android:layout_span="1"
+            	android:layout_column="2"
+	            style="@style/field_value_style"
+	            android:gravity="center_vertical|left"
+	            android:text="@string/lbl_msg_mac_default" />
+	        
+	        
+	        
+	        
+	        
+	        <TextView
+	            android:id="@+id/Lan_textView6_1"
+	            android:layout_width="fill_parent"
+            	android:layout_height="40px"
+            	android:layout_span="1"
+            	android:layout_column="3"
+	            style="@style/lbl_msg_style"
+	            android:gravity="center_vertical|left"
+	            android:text="@string/lbl_msg_mac2" />
+	
+	        <TextView
+	            android:id="@+id/Lan_txv_fan_mac2_value"
+	            android:layout_width="fill_parent"
+            	android:layout_height="40px"
+            	android:layout_span="1"
+            	android:layout_column="4"
+	            style="@style/field_value_style"
+	            android:gravity="center_vertical|left"
+	            android:text="@string/lbl_msg_mac_default" />
+	        
+	        
+	        
+	        <TextView
+	            android:id="@+id/Lan_textView6_2"
+	            android:layout_width="fill_parent"
+            	android:layout_height="40px"
+            	android:layout_span="1"
+            	android:layout_column="6"
+	            style="@style/lbl_msg_style"
+	            android:gravity="center_vertical|left"
+	            android:text="@string/lbl_msg_mac3" />
+	
+	        <TextView
+	            android:id="@+id/Lan_txv_fan_mac3_value"
+	            android:layout_width="fill_parent"
+            	android:layout_height="40px"
+            	android:layout_span="1"
+            	android:layout_column="7"
+	            style="@style/field_value_style"
+	            android:gravity="center_vertical|left"
+	            android:text="@string/lbl_msg_mac_default" />
+	        
+	
+	        
+	    </TableRow>
+	 -->    
+        
+        <!-- 第7行 
+        <TableRow 
+            android:id="@+id/TableRow7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+	        android:layout_marginRight="40dip"
+            >
+	        
+            <TextView
+	            android:id="@+id/Lan_textView7_0"
+	            style="@style/lbl_msg_style"
+	            android:layout_gravity="left"
+	            android:text="@string/lbl_msg_mac4" />
+	
+	        <TextView
+	            android:id="@+id/Lan_txv_fan_mac4_value"
+	            style="@style/field_value_style"
+	            android:layout_gravity="left"
+	            android:text="@string/lbl_msg_mac_default" />
+	        
+	        <TextView
+	            android:id="@+id/Lan_textView7_1"
+	            style="@style/lbl_msg_style"
+	            android:layout_gravity="left"
+	            android:text="@string/lbl_msg_mac5" />
+	
+	        <TextView
+	            android:id="@+id/Lan_txv_fan_mac5_value"
+	            style="@style/field_value_style"
+	            android:layout_gravity="left"
+	            android:text="@string/lbl_msg_mac_default" />
+	        
+	        <TextView
+	            android:id="@+id/Lan_textView7_2"
+	            style="@style/lbl_msg_style"
+	            android:layout_gravity="left"
+	            android:text="@string/lbl_msg_mac6" />
+	
+	        <TextView
+	            android:id="@+id/Lan_txv_fan_mac6_value"
+	            style="@style/field_value_style"
+	            android:layout_gravity="left"
+	            android:text="@string/lbl_msg_mac_default" />
+	        
+	
+	        
+	    </TableRow>
+-->	    
+        
+        <LinearLayout
+	        android:id="@+id/lan_linearlayout1_1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
+	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+	        
+	        
+            
 	            <TextView
 		            android:id="@+id/Lan_textView7_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac4" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_fan_mac4_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView7_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac5" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_fan_mac5_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView7_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac6" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_fan_mac6_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
-		    
 	        
 	        
+	    	</LinearLayout>
+	    </LinearLayout>
+        
+        
+        <View
+        android:id="@+id/lan_view_line7"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/bg_gray"/>
+        
+        
+       
+       
+        
+        
+        <!-- 多合一监测模块 -->
+        <!-- 第8行 -->
+        <TableRow 
+            android:id="@+id/Lan_TableRow8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+	        android:layout_marginRight="40dip"
+            >
 	        
-	        
-	        <!-- 多合一监测模块 -->
-	        <!-- 第8行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow8"
+            <TextView
+	            android:id="@+id/Lan_textView8_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
-	            <TextView
-		            android:id="@+id/Lan_textView8_0"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:gravity="center"
-		            android:layout_weight="1"
-		            android:layout_span="4"
-		            android:text="@string/lbl_title_monitor_mac"
-		            android:textSize="20.0sp"
-		            android:textStyle="bold" />
-	            
-		    </TableRow>
-		    
+	            android:layout_height="60px"
+	            android:gravity="center_vertical|left"
+	            android:layout_weight="1"
+	            android:layout_span="4"
+	            android:text="@string/lbl_title_monitor_mac"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold"
+	            android:textColor="@color/text_black" />
+            
+	    </TableRow>
+	    
+        <View
+	        android:id="@+id/lan_view_line8"
+	        android:layout_width="match_parent"
+	        android:layout_height="2px"
+	        android:layout_marginLeft="40px"
+	        android:layout_marginRight="40px"
+	        android:background="@color/bg_gray"/>
+        
+        
+        
+        
+        
+        
+        
+       
+	    
+        
+        
+        
+        
+        <LinearLayout
+	        android:id="@+id/lan_linearlayout2_0"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
 	        
-	        <!-- 第9行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow9"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+            
 	            <TextView
 		            android:id="@+id/Lan_textView9_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac1" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_monitor_mac1_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView9_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac2" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_monitor_mac2_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView9_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac3" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_monitor_mac3_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
-		    
 	        
-	        <!-- 第10行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow10"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+	        
+	    	</LinearLayout>
+	    </LinearLayout>
+	    
+        
+        
+        
+	    
+        
+        
+        
+        
+        <LinearLayout
+	        android:id="@+id/lan_linearlayout2_1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
+	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+	        
+	        
+            
 	            <TextView
 		            android:id="@+id/Lan_textView10_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac4" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_monitor_mac4_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView10_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac5" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_monitor_mac5_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView10_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac6" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_monitor_mac6_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
-		    
-	        
-	        <!-- 智能臭氧发生器 -->
-	        <!-- 第11行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow11"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
-	            <TextView
-		            android:id="@+id/Lan_textView11_0"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:gravity="center"
-		            android:layout_weight="1"
-		            android:layout_span="4"
-		            android:text="@string/lbl_title_o3_mac"
-		            android:textSize="20.0sp"
-		            android:textStyle="bold" />
-	            
-		    </TableRow>
-		    
-	        <!-- 第12行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow12"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-	            <TextView
-		            android:id="@+id/Lan_textView12_0"
-		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
-		            android:text="@string/lbl_msg_mac1" />
-		
-		        <TextView
-		            android:id="@+id/Lan_txv_o3_mac1_value"
-		            style="@style/field_value_style"
-		            android:layout_gravity="left"
-		            android:text="@string/lbl_msg_mac_default" />
-		
-		        
-		    </TableRow>
 	        
 	        
-	        <!-- 开关执行器模块 -->
-	        <!-- 第13行 -->
-	        <TableRow 
-	            android:id="@+id/Lan_TableRow13"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
-	            <TextView
-		            android:id="@+id/Lan_textView13_0"
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:gravity="center"
-		            android:layout_weight="1"
-		            android:layout_span="4"
-		            android:text="@string/lbl_title_switch_mac"
-		            android:textSize="20.0sp"
-		            android:textStyle="bold" />
-	            
-		    </TableRow>
-		    
+	    	</LinearLayout>
+	    </LinearLayout>
+	    
+        
+        
+        <View
+        android:id="@+id/lan_view_line9"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/bg_gray"/>
+        
+        
+        
+        
+        
+	    
+        <!-- 开关执行器模块 -->
+        <!-- 第13行 -->
+        <TableRow 
+            android:id="@+id/Lan_TableRow13"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+	        android:layout_marginRight="40dip"
+            >
 	        
-	        <!-- 第14行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow14"
+            <TextView
+	            android:id="@+id/Lan_textView13_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+	            android:layout_height="60px"
+	            android:gravity="center_vertical|left"
+	            android:layout_weight="1"
+	            android:layout_span="4"
+	            android:text="@string/lbl_title_switch_mac"
+	            android:textSize="20.0sp"
+	            android:textStyle="bold"
+	            android:textColor="@color/text_black" />
+            
+	    </TableRow>
+	    
+        
+	    <View
+	        android:id="@+id/lan_view_line10"
+	        android:layout_width="match_parent"
+	        android:layout_height="2px"
+	        android:layout_marginLeft="40px"
+	        android:layout_marginRight="40px"
+	        android:background="@color/bg_gray"/>
+	    
+        
+        <!-- 第14行 -->
+        <LinearLayout
+	        android:id="@+id/lan_linearlayout3_0"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
+	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+            
 	            <TextView
 		            android:id="@+id/Lan_textView14_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac1" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac1_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView14_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac2" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac2_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView14_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac3" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac3_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
-		    
 	        
-	        <!-- 第15行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow15"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+	        
+	    	</LinearLayout>
+	    </LinearLayout>
+	    
+        
+        <!-- 第15行 -->
+        <LinearLayout
+	        android:id="@+id/lan_linearlayout3_1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
+	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+	        
+	        
+            
 	            <TextView
 		            android:id="@+id/Lan_textView15_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac4" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac4_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView15_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac5" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac5_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView15_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac6" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac6_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
-		    
-	        <!-- 第16行 -->
-	        <TableRow 
-	            android:id="@+id/TableRow16"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            >
-		        
+	        
+	        
+	    	</LinearLayout>
+	    </LinearLayout>
+	    
+        
+        <!-- 第16行 -->   
+	    <LinearLayout
+	        android:id="@+id/lan_linearlayout3_2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	         
+	    	android:paddingRight="40dip"
+	    	android:paddingLeft="40dip"
+	        android:orientation="horizontal"
+	        >
+	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+			    
+	        
+	        
+            
 	            <TextView
 		            android:id="@+id/Lan_textView16_0"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac7" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac7_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
 		        
+	        
+	        </LinearLayout>
+	        
+            
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
+		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView16_1"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac8" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac8_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
+	        
+	        </LinearLayout>
+		        	        
+	        
+            <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:gravity="center"
+	        android:orientation="horizontal"
+	        >
 		        
+                
 		        <TextView
 		            android:id="@+id/Lan_textView16_2"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/lbl_msg_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac9" />
 		
 		        <TextView
 		            android:id="@+id/Lan_txv_switch_mac9_value"
+		            android:layout_width="wrap_content"
+	            	android:layout_height="40px"
 		            style="@style/field_value_style"
-		            android:layout_gravity="left"
+		            android:gravity="center_vertical|left"
 		            android:text="@string/lbl_msg_mac_default" />
-		        
-		
-		        
-		    </TableRow>
 	        
 	        
+	    	</LinearLayout>
+	    </LinearLayout>    
 	        
 	        
 	        

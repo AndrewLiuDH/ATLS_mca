@@ -37,12 +37,14 @@ public class StatusFragment extends BaseFragment {
 	private static final String TAG = "StatusFragment";
 	
 	private MainActivity mMainActivity ;
+
 	
+/*	
 	private ScrollView svResult;
 	private TextView tvLog;
 	private EditText et_at;
 	private Button btsend,btRequestLog,btClearLog;
-	
+*/	
 	
 	
 	
@@ -116,42 +118,84 @@ public class StatusFragment extends BaseFragment {
 	
 	public void flash_data(){
 		
-		txv_hcho1_t.setText(mMainActivity.str_hcho1_t);
+		
+//		(Integer.parseInt(mMainActivity.str_hcho1_t)-450)/10;
+		
+		
+		try {
+			txv_hcho1_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho1_t)-450)/10));
+		} catch (NumberFormatException e) {
+			txv_hcho1_t.setText("--");
+		    e.printStackTrace();
+		}
+		
+//		txv_hcho1_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho1_t)-450)/10));
 		txv_hcho1_h.setText(mMainActivity.str_hcho1_h);
 		txv_hcho1_c.setText(mMainActivity.str_hcho1_c);
-		txv_hcho1_o.setText(mMainActivity.str_hcho1_o+"#"+mMainActivity.str_hcho1_ov);
+		txv_hcho1_o.setText(mMainActivity.str_hcho1_o);
 		
 		
 		
-		
-		txv_hcho2_t.setText(mMainActivity.str_hcho2_t);
+		try {
+			txv_hcho2_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho2_t)-450)/10));
+		} catch (NumberFormatException e) {
+			txv_hcho2_t.setText("--");
+		    e.printStackTrace();
+		}
+//		txv_hcho2_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho2_t)-450)/10));
 		txv_hcho2_h.setText(mMainActivity.str_hcho2_h);
 		txv_hcho2_c.setText(mMainActivity.str_hcho2_c);
-		txv_hcho2_o.setText(mMainActivity.str_hcho2_o+"#"+mMainActivity.str_hcho2_ov);
+		txv_hcho2_o.setText(mMainActivity.str_hcho2_o);
 		
 		
-		
-		txv_hcho3_t.setText(mMainActivity.str_hcho3_t);
+		try {
+			txv_hcho3_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho3_t)-450)/10));
+		} catch (NumberFormatException e) {
+			txv_hcho3_t.setText("--");
+		    e.printStackTrace();
+		}
+//		txv_hcho3_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho3_t)-450)/10));
 		txv_hcho3_h.setText(mMainActivity.str_hcho3_h);
 		txv_hcho3_c.setText(mMainActivity.str_hcho3_c);
-		txv_hcho3_o.setText(mMainActivity.str_hcho3_o+"#"+mMainActivity.str_hcho3_ov);
+		txv_hcho3_o.setText(mMainActivity.str_hcho3_o);
 		
 		
-		txv_hcho4_t.setText(mMainActivity.str_hcho4_t);
+		try {
+			txv_hcho4_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho4_t)-450)/10));
+		} catch (NumberFormatException e) {
+			txv_hcho4_t.setText("--");
+		    e.printStackTrace();
+		}
+//		txv_hcho4_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho4_t)-450)/10));
 		txv_hcho4_h.setText(mMainActivity.str_hcho4_h);
 		txv_hcho4_c.setText(mMainActivity.str_hcho4_c);
-		txv_hcho4_o.setText(mMainActivity.str_hcho4_o+"#"+mMainActivity.str_hcho4_ov);
+		txv_hcho4_o.setText(mMainActivity.str_hcho4_o);
 		
-		txv_hcho5_t.setText(mMainActivity.str_hcho5_t);
+		
+		
+		try {
+			txv_hcho5_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho5_t)-450)/10));
+		} catch (NumberFormatException e) {
+			txv_hcho5_t.setText("--");
+		    e.printStackTrace();
+		}
+//		txv_hcho5_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho5_t)-450)/10));
 		txv_hcho5_h.setText(mMainActivity.str_hcho5_h);
 		txv_hcho5_c.setText(mMainActivity.str_hcho5_c);
-		txv_hcho5_o.setText(mMainActivity.str_hcho5_o+"#"+mMainActivity.str_hcho5_ov);
+		txv_hcho5_o.setText(mMainActivity.str_hcho5_o);
 		
 		
-		txv_hcho6_t.setText(mMainActivity.str_hcho6_t);
+		
+		try {
+			txv_hcho6_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho6_t)-450)/10));
+		} catch (NumberFormatException e) {
+			txv_hcho6_t.setText("--");
+		    e.printStackTrace();
+		}
+//		txv_hcho6_t.setText(Integer.toString((Integer.parseInt(mMainActivity.str_hcho6_t)-450)/10));
 		txv_hcho6_h.setText(mMainActivity.str_hcho6_h);
 		txv_hcho6_c.setText(mMainActivity.str_hcho6_c);
-		txv_hcho6_o.setText(mMainActivity.str_hcho6_o+"#"+mMainActivity.str_hcho6_ov);
+		txv_hcho6_o.setText(mMainActivity.str_hcho6_o);
 	}
 	
 	
@@ -161,13 +205,16 @@ public class StatusFragment extends BaseFragment {
 				container, false);
 		
 		Log.d(TAG, "onCreateView---->");
+
 		
+/*
 		svResult = (ScrollView) statusLayout.findViewById(R.id.svResult);
 		et_at = (EditText) statusLayout.findViewById(R.id.inputAT);
 		btsend = (Button) statusLayout.findViewById(R.id.sendAT);
 		btRequestLog = (Button) statusLayout.findViewById(R.id.requestlog);
 		btClearLog = (Button) statusLayout.findViewById(R.id.clearlog);
 		tvLog = (TextView) statusLayout.findViewById(R.id.tvLog);
+*/
 		
 		mMainActivity = (MainActivity) getActivity();
 		mFragmentManager = getActivity().getSupportFragmentManager();
@@ -210,7 +257,7 @@ public class StatusFragment extends BaseFragment {
 		
 		
 		
-		
+/*		
 		btsend.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -285,10 +332,13 @@ public class StatusFragment extends BaseFragment {
 				
 			}
 		});
+*/
 		return statusLayout;
 	}
 	
 	private void addLog(String str) {
+		
+/*		
 		tvLog.append(str + "\n");
 		//设置默认滚动到底部
 		svResult.post(new Runnable() {
@@ -296,6 +346,8 @@ public class StatusFragment extends BaseFragment {
 				svResult.fullScroll(ScrollView.FOCUS_DOWN);
 			}
 		});
+		
+*/
 	}
 	
 	public void postSensor() {

@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="4.0dip" >
+    android:background="@color/bg_white"
+    >
 <LinearLayout 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,63 +12,98 @@
 
     <LinearLayout         
 		android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
+    	android:layout_height="50px"
+    	android:gravity="center_vertical|left"
+    	android:paddingRight="40dip"
+    	android:paddingLeft="40dip"   
     	android:orientation="horizontal">
          <TextView 
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|left"
+	        style="@style/lbl_msg_style"
 	        android:text="@string/now_time"/>
 		<TextView
 	    	android:id="@+id/now_date"
 	      	android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|left"
+	        style="@style/lbl_msg_style"
 	     />
          
     	<DigitalClock
 	        android:id="@+id/digitalClock1"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content" />
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|left" 
+	        style="@style/lbl_msg_style"/>
         
     </LinearLayout>
    
     
+    <View
+        android:id="@+id/timerstart_view_line1"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:background="@color/bg_gray"/>
+    
+    
 	<LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal" 
-          android:layout_marginTop="20dp">
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" 
+	    android:gravity="center_vertical|left"
+	  	android:paddingRight="40dip"
+		android:paddingLeft="40dip">
         
        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
             android:textSize="15sp"
             android:text="模式：" />
         
-         <RadioGroup android:id="@+id/radioGroup2"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
-      		<RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/data" android:text="年月日" android:checked="true"></RadioButton>  
+         <RadioGroup android:id="@+id/radioGroup2"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:textColor="@color/text_gray">
+      		<RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/data" android:text="年月日" android:checked="true" android:textColor="@color/text_gray"></RadioButton>  
      		<TextView android:layout_width="20dp" android:layout_height="wrap_content"/>
-     		<RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/week" android:text="星期"></RadioButton>  
+     		<RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/week" android:text="星期" android:textColor="@color/text_gray"></RadioButton>  
   		</RadioGroup>
         
 	</LinearLayout>
+	
+	
+	<View
+	    android:id="@+id/timerstart_view_line1"
+	    android:layout_width="match_parent"
+	    android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
+	    android:layout_height="2px" 
+	    android:background="@color/bg_gray"/>
+	
         
-	<TextView android:layout_width="wrap_content" android:layout_height="20dp"/>
+	
         
 	<LinearLayout
          android:id="@+id/weektime"
          android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_height="70px"
+         android:gravity="center_vertical|left"
+         android:layout_marginRight="40dip"
+    	 android:layout_marginLeft="40dip"
          android:orientation="horizontal">
          
          <TextView
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_height="50px"
+             android:gravity="center_vertical|left"
+             android:textColor="@color/text_gray"
              android:text="重复：" />
          
        	<CheckBox
         	android:id="@+id/sun"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周日"
         />
        
@@ -76,7 +112,8 @@
         <CheckBox
         	android:id="@+id/mon"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周一"
         />
         
@@ -85,7 +122,8 @@
         <CheckBox
         	android:id="@+id/tue"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周二"
         />
         
@@ -94,7 +132,8 @@
         <CheckBox
         	android:id="@+id/wed"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周三"
         />
         
@@ -103,7 +142,8 @@
         <CheckBox
         	android:id="@+id/thu"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周四"
         />
         
@@ -112,7 +152,8 @@
        <CheckBox
         	android:id="@+id/fri"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周五"
         />
        
@@ -121,31 +162,35 @@
         <CheckBox
         	android:id="@+id/sat"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
+        	android:layout_height="50px"
+        	android:textColor="@color/text_gray"
         	android:text="周六"
         />
          
          
 	</LinearLayout>
          
-	<TextView android:layout_width="wrap_content" android:layout_height="20dp"/>
       
 	<LinearLayout
 		android:id="@+id/odate"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_height="70px"
+		android:gravity="center_vertical|left"
+		android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
 		android:orientation="horizontal" >
         
        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
             android:textSize="15sp"
             android:text="预约使用：" />
         
 		<Button
              android:id="@+id/kaidate"
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_height="50px"
              android:text="选择日期" />
          
  		
@@ -156,25 +201,29 @@
              android:id="@+id/kaidatetv"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textColor="@color/text_gray"
              android:text="-------------" />
          
    
         
 	</LinearLayout>
         
-	<TextView android:layout_width="wrap_content" android:layout_height="20dp"/>
                
 		
                
 	<LinearLayout
-          android:id="@+id/otime"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal" >
+        android:id="@+id/otime"
+        android:layout_width="wrap_content"
+        android:layout_height="70px"
+        android:gravity="center_vertical|left"
+        android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
+        android:orientation="horizontal" >
         
        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
             android:textSize="15sp"
             android:text="预约使用：" />
         
@@ -184,7 +233,7 @@
 		<Button
              android:id="@+id/kaitime"
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
+             android:layout_height="50px"
              android:text="选择时间"/>
          
 		<TextView android:layout_width="20dp" android:layout_height="wrap_content"/>
@@ -195,30 +244,43 @@
              android:id="@+id/kaitimetv"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
+             android:textColor="@color/text_gray"
              android:text="-------------" />
         
 	</LinearLayout>
         
-	<TextView android:layout_width="wrap_content" android:layout_height="20dp"/>
 
+	<View
+	    android:id="@+id/timerstart_view_line2"
+	    android:layout_width="match_parent"
+	    android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
+	    android:layout_height="2px" 
+	    android:background="@color/bg_gray"/>
+	
+	
+	
 	<LinearLayout
-          android:id="@+id/addtime"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal" >
+        android:id="@+id/addtime"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:gravity="center_vertical|left"
+        android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
+        android:orientation="horizontal" >
          
 	    <TextView android:layout_width="80dp" android:layout_height="wrap_content"/>
 	    <Button
 	        android:id="@+id/ok"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
+	        android:layout_height="50px"
 	        android:text="添加" />
 	    
 	    <TextView android:layout_width="40dp" android:layout_height="wrap_content"/>
 	     <Button
 	        android:id="@+id/reset"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
+	        android:layout_height="50px"
 	        android:text="全部清除" />
     </LinearLayout>
     
@@ -226,8 +288,10 @@
 	<ListView 
 	    android:id="@+id/listview"
 	    android:layout_width="fill_parent"
-		android:transcriptMode="alwaysScroll"
-	    android:layout_height="360dip"
+		android:transcriptMode="normal"
+	    android:layout_height="160dip"
+	    android:layout_marginRight="40dip"
+    	android:layout_marginLeft="40dip"
 	    ></ListView>
 
      

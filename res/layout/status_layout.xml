@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    android:background="@color/bg_white">
 
     
     <TableLayout 
         android:id="@+id/status_tbl_01"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
         android:stretchColumns="*" >
@@ -14,99 +15,115 @@
         <!-- 第0行 -->
         <TableRow 
             android:id="@+id/Status_TableRow0"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+    		android:paddingRight="40dip"
+    		android:paddingLeft="40dip"  
             >
 
             <TextView
                 android:id="@+id/status_textView1_0"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:gravity="center_vertical|left"
                 android:layout_weight="1"
 		        android:layout_span="4"
                 android:text="多合一监测模块状态显示"
+                android:textColor="@color/text_black"
                 android:textSize="20.0sp"
                 android:textStyle="bold" />
             
         </TableRow>
 	
+        <View
+	        android:id="@+id/status_view_line1"
+	        android:layout_width="match_parent"
+	        android:layout_height="2px"
+	        android:layout_marginRight="40dip"
+    		android:layout_marginLeft="40dip"  
+	        android:background="@color/bg_gray"/>
+        
+        
+        
         <!-- 第1行 -->
         <TableRow 
             android:id="@+id/Status_TableRow1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingRight="40dip"
+    		android:paddingLeft="40dip"  
             >
             
             <TextView
 	            android:id="@+id/Status_textView1_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
+	            android:layout_height="60px"
+	            android:gravity="center"
+	            android:layout_weight="1"
 	            android:layout_span="4"	            
 	            android:text="     "
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            style="@style/lbl_msg_style"
+	            />
             
             <TextView
 	            android:id="@+id/Status_textView1_1"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
-	            android:text="监测模块1"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            android:text="监测模块一"
+	            style="@style/lbl_msg_style" />
             
             <TextView
 	            android:id="@+id/Status_textView1_2"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	            
-	            android:text="监测模块2"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
+	            android:layout_weight="1"	    
+	            android:layout_span="4"	                    
+	            android:text="监测模块二"
+	            style="@style/lbl_msg_style" />
             
             <TextView
 	            android:id="@+id/Status_textView1_2"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	            
-	            android:text="监测模块3"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
+	            android:layout_weight="1"	    
+	            android:layout_span="4"	                    
+	            android:text="监测模块三"
+	            style="@style/lbl_msg_style" />
             
             <TextView
 	            android:id="@+id/Status_textView1_2"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	            
-	            android:text="监测模块4"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
+	            android:layout_weight="1"		
+	            android:layout_span="4"	                        
+	            android:text="监测模块四"
+	            style="@style/lbl_msg_style" />
             
             <TextView
 	            android:id="@+id/Status_textView1_2"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
-	            android:text="监测模块5"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            android:text="监测模块五"
+	            style="@style/lbl_msg_style" />
             
             <TextView
 	            android:id="@+id/Status_textView1_2"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
-	            android:text="监测模块6"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            android:text="监测模块六"
+	            style="@style/lbl_msg_style" />
             
         </TableRow>
         
@@ -116,83 +133,196 @@
             android:id="@+id/Status_TableRow2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingRight="40dip"
+    		android:paddingLeft="40dip"  
             >
             
             <TextView
 	            android:id="@+id/Status_textView2_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="60px"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
 	            android:text="温度值 "
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            style="@style/lbl_msg_style" />
             
-            <TextView
-	            android:id="@+id/Status_hcho1_t"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	          
-	            style="@style/field_value_style"  
-	            android:text="-----摄氏度"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho1_t"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="℃"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho2_t"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	          
-	            style="@style/field_value_style"  
-	            android:text="-----摄氏度"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	           
             
-            <TextView
-	            android:id="@+id/Status_hcho3_t"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	        
-	            style="@style/field_value_style"    
-	            android:text="-----摄氏度"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho2_t"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="℃"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho4_t"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----摄氏度"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
             
-            <TextView
-	            android:id="@+id/Status_hcho5_t"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----摄氏度"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho3_t"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="℃"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho6_t"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	       
-	            style="@style/field_value_style"     
-	            android:text="-----摄氏度"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho4_t"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="℃"
+		            />
+	        </LinearLayout> 
+	        
+            
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho5_t"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="℃"
+		            />
+	        </LinearLayout> 
+	        
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho6_t"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="℃"
+		            />
+	        </LinearLayout> 
+	        
+            
+            
             
         </TableRow>
         
@@ -203,83 +333,193 @@
             android:id="@+id/Status_TableRow3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingRight="40dip"
+    		android:paddingLeft="40dip"  
             >
             
             <TextView
 	            android:id="@+id/Status_textView3_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="60px"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
 	            android:text="湿度值 "
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            style="@style/lbl_msg_style" />
             
-            <TextView
-	            android:id="@+id/Status_hcho1_h"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	        
-	            style="@style/field_value_style"    
-	            android:text="--%"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho1_h"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="%"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho2_h"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="--%"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	           
             
-            <TextView
-	            android:id="@+id/Status_hcho3_h"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="--%"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho2_h"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="%"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho4_h"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="--%"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
             
-            <TextView
-	            android:id="@+id/Status_hcho5_h"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	     
-	            style="@style/field_value_style"       
-	            android:text="--%"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho3_h"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="%"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho6_h"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	        
-	            style="@style/field_value_style"    
-	            android:text="--%"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho4_h"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="%"
+		            />
+	        </LinearLayout> 
+	        
+            
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho5_h"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="%"
+		            />
+	        </LinearLayout> 
+	        
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho6_h"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="%"
+		            />
+	        </LinearLayout>
             
         </TableRow>
         
@@ -289,83 +529,193 @@
             android:id="@+id/Status_TableRow4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingRight="40dip"
+    		android:paddingLeft="40dip"  
             >
             
             <TextView
 	            android:id="@+id/Status_textView4_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="60px"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
 	            android:text="甲醛浓度值 "
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            style="@style/lbl_msg_style" />
             
-            <TextView
-	            android:id="@+id/Status_hcho1_c"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	     
-	            style="@style/field_value_style"       
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho1_c"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho2_c"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	       
-	            style="@style/field_value_style"     
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	           
             
-            <TextView
-	            android:id="@+id/Status_hcho3_c"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho2_c"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho4_c"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	       
-	            style="@style/field_value_style"     
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
             
-            <TextView
-	            android:id="@+id/Status_hcho5_c"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	     
-	            style="@style/field_value_style"       
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho3_c"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho6_c"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	       
-	            style="@style/field_value_style"     
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho4_c"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
+            
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho5_c"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
+            <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho6_c"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="3"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="1"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout>
             
         </TableRow>
         
@@ -375,89 +725,206 @@
             android:id="@+id/Status_TableRow5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingRight="40dip"
+    		android:paddingLeft="40dip"  
             >
             
             <TextView
 	            android:id="@+id/Status_textView5_0"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
+	            android:layout_height="60px"
 	            android:layout_weight="1"	
 	            android:layout_span="4"	            
 	            android:text="臭氧浓度值 "
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	            style="@style/lbl_msg_style" />
             
-            <TextView
-	            android:id="@+id/Status_hcho1_o"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	       
-	            style="@style/field_value_style"     
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho1_o"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho2_o"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+	           
             
-            <TextView
-	            android:id="@+id/Status_hcho3_o"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho2_o"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho4_o"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
             
-            <TextView
-	            android:id="@+id/Status_hcho5_o"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho3_o"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
             
-            <TextView
-	            android:id="@+id/Status_hcho6_o"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"	
-	            android:layout_span="4"	      
-	            style="@style/field_value_style"      
-	            android:text="-----ddb"
-	            android:textSize="20.0sp"
-	            android:textStyle="bold" />
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho4_o"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
+            
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho5_o"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout> 
+	        
+            <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_span="4"
+		        android:gravity="center"
+		        android:layout_weight="1"	
+		        android:orientation="horizontal"
+		        >
+	            <TextView
+		            android:id="@+id/Status_hcho6_o"
+		            android:layout_width="60dip"
+		            android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_span="4"	          
+		            style="@style/field_value_style"  
+		            android:text="-----"
+		            android:background="@drawable/textview_shape"
+		            />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:gravity="center_vertical|left"
+		            android:layout_span="4"	          
+		            style="@style/lbl_msg_style"  
+		            android:text="ddb"
+		            />
+	        </LinearLayout>
             
         </TableRow>
 	
 	</TableLayout>
 	
-	
+
+    
+    
+    
+    
+    
+    <!--  
+    	
    <LinearLayout
         android:id="@+id/status_linearLayout1"
         android:layout_width="match_parent"
@@ -539,4 +1006,10 @@
             android:text="正在连接" />
     </ScrollView>
 
+    
+    
+    -->
+    
+    
+    
 </RelativeLayout>

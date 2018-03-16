@@ -59,11 +59,10 @@ import android_serialport_api.SerialPort;
  * 
  * @author 
  */
-public class MainActivity extends FragmentActivity implements OnClickListener {
+public class MainActivity extends FragmentActivity implements OnClickListener{
 
 	private static final String TAG = "MainActivity";
-
-
+	 
 
 	public boolean	statusFragmentOn = false;
 	public boolean	controlFragmentOn = false;
@@ -165,7 +164,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	
 	
 	
-	public String filename = "hcho1_data";
+//	public String filename = "hcho1_data";
 	
 	private static final int LAN_RCV_000 = 0x00;
 	private static final int STATUS_RCV_031 = 0x01;
@@ -349,13 +348,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				
 				if(hcho1_log){
 					hcho1_log = false;
+					
+					/*						
 					FileHelper fHelper = new FileHelper(getApplicationContext());
 		            String filedetail = hour+":"+minute+"    "+status031;
+		            
+	            
 		            try {
 		                fHelper.saveAdd(filename, filedetail);
 		            } catch (Exception e) {
 		                e.printStackTrace();
 		            }
+					 */
 				}
 				
                 
@@ -373,13 +377,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 				
 				if(hcho2_log){
 					hcho2_log = false;
+					
+					/*					
 					FileHelper fHelper = new FileHelper(getApplicationContext());
 		            String filedetail = hour+":"+minute+"    "+status032;
+		            
+
 		            try {
 		                fHelper.saveAdd(filename, filedetail);
 		            } catch (Exception e) {
 		                e.printStackTrace();
 		            }
+					 */
 				}
 				
 				break;
@@ -1122,7 +1131,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			super.run();
 			
 			while(!isInterrupted()) {
-/*				
+///*				
 				try {
 					
 					if (mInputStream == null) return;
@@ -1134,7 +1143,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 					e.printStackTrace();
 					return;
 				}
-*/				
+//*/				
 				try {
 					Thread.sleep(50);
 				} catch (Exception e) {
@@ -1148,13 +1157,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 
 	private SerialPort getSerialPort() throws SecurityException, IOException,
 		InvalidParameterException {
-/*
+///*
 	if (mSerialPort == null) {
 		
 			mSerialPort = new SerialPort("/dev/ttyS1", 9600, 0);
 		
 	}
-*/
+//*/
 	return mSerialPort;
 	}
 	
@@ -1180,7 +1189,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		
 		
 		
-/*		
+///*		
 		try {
 			
 			
@@ -1202,7 +1211,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			Toast.makeText(this, "打开串口失败，IO异常",Toast.LENGTH_SHORT).show();
 		}
 		
-*/		
+//*/		
 		hcho1_log = false;
 		hcho2_log = false;
 		hcho3_log = false;
@@ -1382,6 +1391,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			if (statusFragment == null) {
 				statusFragment = new StatusFragment();
 			} 
+
 			
 		}else if(TextUtils.equals(tag, getString(R.string.control_fg))){
 			controlImage.setImageResource(R.drawable.control_selected);
@@ -1390,6 +1400,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			if (controlFragment == null) {
 				controlFragment = new ControlFragment();
 			} 
+
 			
 		}else if(TextUtils.equals(tag, getString(R.string.lan_fg))){
 			lanImage.setImageResource(R.drawable.lan_selected);
@@ -1538,14 +1549,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	
 	
 	public void SendComCmd(byte[] _cmd) {
-/*
+///*
 		try {
 			mOutputStream.write(_cmd);//发送数据
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-*/
+//*/
 	}
     
     
@@ -1567,14 +1578,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         	//wait for receive data over.
         	
         	byte[] send = message.getBytes();
-/*        	
+///*        	
         	try {
     			mOutputStream.write(send);//发送数据
     		} catch (IOException e) {
     			// TODO Auto-generated catch block
     			e.printStackTrace();
     		}
-  */          
+//*/          
             
             //开启等待
  //       	TimeoutThread mTimeoutThread = new TimeoutThread();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ATLS_mca</string>
+    <string name="app_name">解剖实验室中控系统</string>
     <string name="title_item_detail">Item Detail</string>
     
     
@@ -12,7 +12,6 @@
     <string name="user_fg">用户</string>
     <string name="timerstart_fg">定时启动</string>
     <string name="dongtai_fg">动态</string>
-    
     
     
     <!-- 组网页面定义 -->
@@ -42,7 +41,6 @@
 	    
 	    <string name="lbl_msg_mac_default">--------</string>
 
-	    
 	    
 	<!-- 定时页面定义 -->    
 	    <string name="now_time">当前时间：</string>

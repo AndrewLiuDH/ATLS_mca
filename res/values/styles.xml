@@ -27,16 +27,20 @@
     </style>
     
      <style name="lbl_msg_style">
-        <item name="android:textSize">12.0sp</item>
+        <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:paddingLeft">4.0dip</item>
+        <item name="android:textColor">#6d6d6d</item>
     </style>
 
     <style name="field_value_style">
-        <item name="android:textSize">13.0sp</item>
+        <item name="android:textSize">16.0sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#95bb27</item>
+        <item name="android:textColor">#12A8AC</item>
         <item name="android:paddingLeft">2.0dip</item>
     </style>
+    
+    
+    
     
 </resources>
